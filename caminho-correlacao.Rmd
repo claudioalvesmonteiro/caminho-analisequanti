@@ -87,3 +87,23 @@ ggplot(correlacao_data1, aes(x = tamanho_pe_esquerdo,    # definir eixo X
     geom_point()                                         # definir tipo de 'geom'
 
 ```
+
+</br>
+
+#### **Qual a relação entre o Nota no ENEM e Altura da pessoa?**
+
+```{r}
+# correlacionar as varivaeis
+cor(nota_enem, altura_cm)
+
+# teste de correlacao de Pearson
+cor.test(nota_enem, altura_cm)
+
+# grafico de correlaco ggplot2 e titulos nos eixos
+ggplot(correlacao_data1, aes(x = nota_enem,  y = altura_cm)) + 
+    geom_point()  +
+    labs(title = "Relação Entre Nota no ENEM e Altura",
+             x =  "Nota ENEM",
+             y =  "Altura (cm)")
+
+```
