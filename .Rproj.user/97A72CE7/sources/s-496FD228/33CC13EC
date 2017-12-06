@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1512594786705.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2524972071",
+    "id" : "33CC13EC",
+    "lastKnownWriteTime" : 1512594798,
+    "last_content_update" : 1512594798791,
+    "path" : "~/GitProjects/caminho-analisequanti/caminho-correlacao.Rmd",
+    "project_path" : "caminho-correlacao.Rmd",
+    "properties" : {
+        "cursorPosition" : "46,25",
+        "last_setup_crc32" : "342FD4E4bb338d19",
+        "scrollLine" : "41"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}
