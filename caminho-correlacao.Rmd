@@ -1,0 +1,63 @@
+---
+title: "Correlação em R"
+author: "Claudio A. Monteiro"
+date: "6 de dezembro de 2017"
+output: 
+  html_document:
+  theme: journal
+  highlight: pygments
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Introdução
+Nesta cessão vamos aprender a fazer testes de *correlação* e gráficos no R. Vamos fazer testes com dados simulados, demonstrando como se comportam distribuições com uma correlação de 1, -1 e 0. Os pacotes necessários serão os **readr** e **plotly**. Para instalá-los você rodar os seguintes comandos:
+
+
+```{r results='hide', message=FALSE, warning=FALSE}
+# instalar pacotes (quando necessario)
+# install.packages(c("readr", "plotly", dependencies = T))
+                 
+# carregar pacotes
+library(readr); library(ggplot2)
+```
+
+Carregue o banco de dados ‘correlacao_data_1.csv’. *Lembre-se* que o caminho computacional para o arquivo tem que estar de acordo com o caminho de seu computador como já demonstrado em licoes anteriores.
+
+```{r}
+correlacao_data1 <- read.csv("~/Documents/Claudio/untitled folder/caminho-analisequanti/Bases de Dados/correlacao_data1.csv")
+
+```
+
+#### Qual a relação entre as horas que passo dormindo e as horas que passo acordado, por dia?
+
+
+```{r}
+# correlacionar as varivaeis
+cor(correlacao_data1$horas_dormindo, correlacao_data1$horas_acordado)
+
+# teste de correlacao de Pearson
+cor.test(correlacao_data1$horas_dormindo, correlacao_data1$horas_acordado)
+
+# grafico dispersao no pacote Rbase
+plot(correlacao_data1$horas_dormindo, correlacao_data1$horas_acordado)  
+
+# com titulo e rotulos nos eixos
+plot(correlacao_data1$horas_dormindo, correlacao_data1$horas_acordado,
+     main = "Relação Entre Horas Dormindo e Horas Acordado por Dia",     # titulo do grafico
+     xlab = "Horas Dormindo", ylab = "Horas Acordado")     # rotulos eixos x e y
+
+```
+
+
+
+
+
+
+
+
+
+
+
